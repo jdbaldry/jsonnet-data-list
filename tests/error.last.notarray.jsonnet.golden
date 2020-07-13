@@ -1,0 +1,3 @@
+RUNTIME ERROR: not array: `last`
+	../main.libsonnet:(17:5)-(19:25)	function <anonymous>
+	error.last.notarray.jsonnet:3:1-10	

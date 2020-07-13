@@ -1,0 +1,3 @@
+RUNTIME ERROR: empty array: `last`
+	../main.libsonnet:(18:5)-(19:25)	function <anonymous>
+	error.last.emptyarray.jsonnet:3:1-11	

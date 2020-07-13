@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/sh0rez/docsonnet.git",
+          "subdir": "doc-util"
+        }
+      },
+      "version": "master"
+    }
+  ],
+  "legacyImports": true
+}
