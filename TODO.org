@@ -1,0 +1,6 @@
+* Finish implementing Data.List functions
+ - [ ] complete intercalate function
+ - [ ] do the rest
+* Resources
+- https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List.html
+- https://github.com/sh0rez/docsonnet
