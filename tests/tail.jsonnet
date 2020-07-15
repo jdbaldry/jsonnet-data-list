@@ -4,7 +4,7 @@ local tests = [
   {
     name: 'one element',
     input: ['a'],
-    want: ['a'],
+    want: [],
   },
   {
     name: 'many elements',

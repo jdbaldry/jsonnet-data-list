@@ -1,12 +1,19 @@
 local l = import '../main.libsonnet';
 
 local tests = [{
+  name: 'numbers',
+  input: {
+    a: [0, 0],
+    b: [[1], [1], [1]],
+  },
+  want: [1, 0, 0, 1, 0, 0, 1],
+}, {
   name: 'Lorem ipsum',
   input: {
     a: [',', ' '],
-    b: ['Lorem', 'ipsum', 'dolor'],
+    b: [['L', 'o', 'r', 'e', 'm'], ['i', 'p', 's', 'u', 'm']],
   },
-  want: ['Lorem', ',', ' ', 'ipsum', ',', ' ', 'dolor'],
+  want: ['L', 'o', 'r', 'e', 'm', ',', ' ', 'i', 'p', 's', 'u', 'm'],
 }];
 std.foldl(function(acc, tc) (
             local got = l.intercalate(tc.input.a, tc.input.b);

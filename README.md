@@ -18,7 +18,9 @@ local data-list = import "github.com/jdbaldry/jsonnet-data-list/main.libsonnet"
 * [`fn intersperse(e, a)`](#fn-intersperse)
 * [`fn last(a)`](#fn-last)
 * [`fn reverse(a)`](#fn-reverse)
+* [`fn subsequences(a)`](#fn-subsequences)
 * [`fn tail(a)`](#fn-tail)
+* [`fn transpose(a)`](#fn-transpose)
 
 ## Fields
 
@@ -44,7 +46,7 @@ Return all the elements of an array except the last one. The array must be non-e
 intercalate(a, b)
 ```
 
-Inserts the array `a` between the elements of the array `b` and concatenates the result.
+Inserts the array `a` between the elements of the array of arrays `b` and concatenates the result.
 
 ### fn intersperse
 
@@ -70,6 +72,14 @@ reverse(a)
 
 Returns the elements of an array in reverse order. The array must be finite.
 
+### fn subsequences
+
+```ts
+subsequences(a)
+```
+
+Returns an array of all subsequences of array `a`
+
 ### fn tail
 
 ```ts
@@ -77,3 +87,11 @@ tail(a)
 ```
 
 Extract the elements after the head of a array, which must be non-empty.
+
+### fn transpose
+
+```ts
+transpose(a)
+```
+
+Transposes the rows and columns of its arguments. If some rows are shorter than the following rows, their elements are skipped.
