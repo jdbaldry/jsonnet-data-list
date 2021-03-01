@@ -71,11 +71,14 @@ local d = (import 'github.com/sh0rez/docsonnet/doc-util/main.libsonnet') {
       ),
 
   '#subsequences': d.fn('Returns an array of all subsequences of array `a`', [d.arg('a', d.T.array)]),
-  subsequences(a):: error 'not implemented',
-  //    assert std.isArray(a) : 'not array: `subsequences`';
-  //    if std.length(a) == 0 then [] else
-  //      local x = self.head(a);
-  //      local xs = self.tail(a);
-  //      local f(r, ys) = ys + [x] + r;
-  //      [[x], std.foldr(f, self.subsequences(xs), [])],
+  subsequences(a):: [[]] + self.nonEmptySubsequences(a),
+
+  '#nonEmptySubsequences': d.fn('Return an array of non-empty subsequences of array `a`', [d.arg('a', d.T.array)]),
+  nonEmptySubsequences(a)::
+    assert std.isArray(a) : 'not array: `subsequences`';
+    if std.length(a) == 0 then [] else
+      local x = self.head(a);
+      local xs = self.tail(a);
+      local f(ys, r) = [ys] + [[x] + ys] + r;
+      [[x]] + std.foldr(f, self.nonEmptySubsequences(xs), []),
 }

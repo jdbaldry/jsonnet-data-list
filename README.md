@@ -17,6 +17,7 @@ local data-list = import "github.com/jdbaldry/jsonnet-data-list/main.libsonnet"
 * [`fn intercalate(a, b)`](#fn-intercalate)
 * [`fn intersperse(e, a)`](#fn-intersperse)
 * [`fn last(a)`](#fn-last)
+* [`fn nonEmptySubsequences(a)`](#fn-nonemptysubsequences)
 * [`fn reverse(a)`](#fn-reverse)
 * [`fn subsequences(a)`](#fn-subsequences)
 * [`fn tail(a)`](#fn-tail)
@@ -63,6 +64,14 @@ last(a)
 ```
 
 Extract the last element of an array, which must be finite and non-empty.
+
+### fn nonEmptySubsequences
+
+```ts
+nonEmptySubsequences(a)
+```
+
+Return an array of non-empty subsequences of array `a`
 
 ### fn reverse
 
